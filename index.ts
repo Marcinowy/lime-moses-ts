@@ -1,12 +1,14 @@
 import { DatabaseClient } from './classes/database-client';
 import { Rider } from './classes/rider';
 import { Bike } from './interfaces/bike';
+import { Position } from './interfaces/position';
 
 (async () => {
+  const callPosition: Position = { lat: 52.536566, lng: 13.420614 };
   const dbClient = new DatabaseClient({host:'localhost', user: 'root', database: 'test'});
 
   const rider: Rider = (await dbClient.getRiders(1))[0];
-  const bikes: Bike[] = await rider.getClosestBikes({lat: 52.536566, lng: 13.420614}, .1);
+  const bikes: Bike[] = await rider.getClosestBikes(callPosition, .1);
   
   const ringRiders: Rider[] = await dbClient.getRiders(bikes.length);
   const promises: Promise<void>[] = ringRiders.map((el: Rider, index: number) => {
