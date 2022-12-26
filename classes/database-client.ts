@@ -14,13 +14,13 @@ export class DatabaseClient extends DatabaseConnector {
     const sql = 'SELECT `token`, `id` FROM `lime_accounts` WHERE `active` = 1 ORDER BY `last_call_time`, `called` LIMIT ?';
     const [rows] = await connection.query<DbRider[]>(sql, [count]);
 
-    return rows.map<Rider>((el: DbRider) => {
+    return rows.map((el: DbRider) => {
       return new Rider(el);
     });
   }
 
   async setUsed(riders: Rider[]): Promise<void> {
-    const ids: number[] = riders.map<number>((el: Rider) => {
+    const ids: number[] = riders.map((el: Rider) => {
       return el.getId();
     });
 
@@ -33,7 +33,7 @@ export class DatabaseClient extends DatabaseConnector {
   }
 
   async setError(riders: Rider[]): Promise<void> {
-    const ids: number[] = riders.map<number>((el: Rider) => {
+    const ids: number[] = riders.map((el: Rider) => {
       return el.getId();
     });
 
