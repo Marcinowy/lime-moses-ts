@@ -9,6 +9,6 @@ Please be careful; lime can block your account, so you should use different acco
 3. Have fun ;)
 
 ## From author
-This code is based on my original code wrote 3 years ago in PHP: (https://github.com/Marcinowy/lime-moses)
-I've been successfully using this tool for 3 years.
-A year after I introduced my first version of this code, lime changed some APIs, due to update of their mobile app. I made some changes for my old script and added statistics. Since then my app called bikes over 10,000 times, so it looks like lime don't care about it ;)
+This code is based on my original code wrote 3 years ago in PHP: https://github.com/Marcinowy/lime-moses
+
+I've been successfully using this tool for 3 years. A year after I introduced my first version of this code, lime changed some APIs, due to update of their mobile app. I made some changes for my old script and added statistics. Since then my app called bikes over 10,000 times, so it looks like lime don't care about it ;)
