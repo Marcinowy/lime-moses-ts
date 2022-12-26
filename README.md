@@ -1,4 +1,4 @@
-# lime-moses
+# lime-moses-ts
 This little app makes every lime scooter near you to ring automatically
 
 Please be careful; lime can block your account, so you should use different account, than your main
